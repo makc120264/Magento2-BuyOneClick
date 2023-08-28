@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Test_BuyOneClick::parent" title="Buy one click" module="Test_BuyOneClick" sortOrder="10"
+             resource="Test_BuyOneClick::parent"/>
+        <add id="Test_BuyOneClick::buy_one_click_orders" title="List buy one click orders" module="Test_BuyOneClick" sortOrder="20"
+             action="buyoneclick/grid" resource="Test_BuyOneClick::buy_one_click_orders" parent="Test_BuyOneClick::parent"/>
+    </menu>
+</config>

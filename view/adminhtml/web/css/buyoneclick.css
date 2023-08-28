@@ -1,0 +1,17 @@
+.clear-btn-wrap {
+    margin-bottom: 40px;
+    padding-right: 40px;
+}
+
+.clear-result {
+    float: right;
+}
+
+.command {
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    font-weight: bold;
+}

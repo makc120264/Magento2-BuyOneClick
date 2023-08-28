@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Test\BuyOneClick\Api\Data\GridInterface" type="Test\BuyOneClick\Model\Grid"/>
+    <preference for="Magento\Framework\Authorization\PolicyInterface" type="Magento\Framework\Authorization\Policy\DefaultPolicy"/>
+
+    <virtualType name="Test\BuyOneClick\Model\ResourceModel\Grid\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">buyoneclick_orders</argument>
+            <argument name="resourceModel" xsi:type="string">Test\BuyOneClick\Model\ResourceModel\Grid</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="grid_buy_one_click_order_list_data_source" xsi:type="string">
+                    Test\BuyOneClick\Model\ResourceModel\Grid\Grid\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
